@@ -165,6 +165,38 @@ async function createBooks() {
       authors[4],
       false
     ),
+    bookCreate(
+      7,
+      "Foundation",
+      "A mathematician and psychohistorian predicts the fall of the Galactic Empire and the rise of a new age.",
+      "9780553293357",
+      authors[2],
+      [genres[1]]
+    ),
+    bookCreate(
+      8,
+      "The Martian Chronicles",
+      "A vivid collection of stories about Mars, its colonists, and the fragile line between wonder and disaster.",
+      "9781451678192",
+      authors[2],
+      [genres[1]]
+    ),
+    bookCreate(
+      9,
+      "I, Robot",
+      "Three laws of robotics, human ambition, and the future of machine intelligence collide in these classic stories.",
+      "9780553382563",
+      authors[2],
+      [genres[1]]
+    ),
+    bookCreate(
+      10,
+      "The Last Question",
+      "A timeless science fiction tale about the ultimate question of entropy, time, and the future of humanity.",
+      "9780000000000",
+      authors[2],
+      [genres[1]]
+    ),
   ]);
 }
 

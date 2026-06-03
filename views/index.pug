@@ -1,16 +1,38 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+  section(class='hero-panel')
+    div(class='hero-copy')
+      p(class='eyebrow') Curated collection
+      h1= title
+      p(class='lead') Welcome to #[em LocalLibrary], a refined digital library where every shelf, author, and copy is carefully presented in elegant detail.
+      div(class='hero-actions')
+        a(class='btn btn-outline-dark me-2', href='/catalog/books') Browse books
+        a(class='btn btn-dark', href='/catalog/authors') Meet authors
+    div(class='hero-visual')
+      img(src='/images/Library Website - Mongoose_Express.png', alt='Library collection preview')
 
-  h1 Dynamic content
+  section(class='stats-grid')
+    div(class='stat-card')
+      span(class='stat-label') Books
+      strong(class='stat-value') !{book_count}
+    div(class='stat-card')
+      span(class='stat-label') Copies
+      strong(class='stat-value') !{book_instance_count}
+    div(class='stat-card')
+      span(class='stat-label') Available now
+      strong(class='stat-value') !{book_instance_available_count}
+    div(class='stat-card')
+      span(class='stat-label') Authors
+      strong(class='stat-value') !{author_count}
+    div(class='stat-card')
+      span(class='stat-label') Genres
+      strong(class='stat-value') !{genre_count}
 
-  p The library has the following record counts:
-
-  ul
-    li #[strong Books:] !{book_count}
-    li #[strong Copies:] !{book_instance_count}
-    li #[strong Copies available:] !{book_instance_available_count}
-    li #[strong Authors:] !{author_count}
-    li #[strong Genres:] !{genre_count}
+  section(class='feature-strip')
+    div
+      h2 A library with character
+      p Discover rich catalogues, elegant records, and a calm reading experience designed to feel as warm as a private study.
+    div
+      h2 Built for browsing
+      p Move from shelves to authors to copies with effortless flow, preserving the charm of a classic library in a modern interface.
